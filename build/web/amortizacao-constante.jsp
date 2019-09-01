@@ -4,17 +4,23 @@
     Author     : Denos
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Amortização Constante</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
     </head>
     <style>
-         body{
+        body{
             text-align: center;   
-        }   
+         }
+        table{
+            margin: 0 auto;
+        }
+             
     </style>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
@@ -25,9 +31,9 @@
            empréstimo.</p>
         
         <form>
-            Empréstimo R$ <input type="number" name="valor">
-            Prazo em Meses <input type="number" name="meses">
-            Taxa de Juros % <input type="number" name="taxa">
+            Empréstimo R$ <input type="text" name="valor">
+            Prazo em Meses <input type="text" name="meses">
+            Taxa de Juros % <input type="text" name="taxa">
             <input type="submit" value="Calcular" name="calcular">
                 
         </form>
@@ -37,6 +43,8 @@
                     double valor = Double.parseDouble(request.getParameter("valor"));
                     int meses = Integer.parseInt(request.getParameter("meses"));
                     double taxa = Double.parseDouble(request.getParameter("taxa"));
+                    
+                    DecimalFormat formatar = new DecimalFormat("0.##");
 
                     double juros = taxa/100;
                     double amortizacao = valor/meses; 
@@ -69,17 +77,17 @@
                                                     
                         <tr>
                             <td><%=i%></td>
-                            <td><%=prestacao%></td>
-                            <td><%=amortizacao%></td>
-                            <td><%=taxaJuros%></td>
-                            <td><%=valor%></td>                              
+                            <td><%=formatar.format(prestacao)%></td>
+                            <td><%=formatar.format(amortizacao)%></td>
+                            <td><%=formatar.format(taxaJuros)%></td>
+                            <td><%=formatar.format(valor)%></td>                              
                         </tr>
                     <%}%>
                     <tr>
                         <td><%="total"%></td>
-                        <td><%=prestacaoTotal%></td>
-                        <td><%=amortizacaoTotal%></td>
-                        <td><%=jurosTotal%></td>
+                        <td><%=formatar.format(prestacaoTotal)%></td>
+                        <td><%=formatar.format(amortizacaoTotal)%></td>
+                        <td><%=formatar.format(jurosTotal)%></td>
                         <td><%='-'%></td>                              
                     </tr>                        
                 </table>
