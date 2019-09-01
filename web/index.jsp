@@ -34,6 +34,9 @@
         
          <a <button type="button" class="btn btn-primary" href="amortizacao-constante.jsp">
             Armotização Constante</button></a>
+        
+         <a <button type="button" class="btn btn-primary" href="tabela-price.jsp">
+            Tabela Price</button></a>
           
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
