@@ -9,15 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+        <%@include file="WEB-INF/jspf/boots-trap.jspf" %>
+        
+        <%@include file="WEB-INF/jspf/css.jspf" %>
         <title>Home</title>
-    </head>
-    
-    <style>
-        body{
-            text-align: center;
-            }
-    </style>
+    </head>    
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
         
@@ -32,11 +28,11 @@
             de tamanho até a sua eliminação.</h4>
         <br>
         
-         <a <button type="button" class="btn btn-primary" href="amortizacao-constante.jsp">
-            Armotização Constante</button></a>
+         <a class="btn btn-primary" href="amortizacao-constante.jsp">Armotização Constante</a></br></br>
+         
+         <a class="btn btn-primary" href="amortizacao-americana.jsp">Armotização Americana</a></br></br>
         
-         <a <button type="button" class="btn btn-primary" href="tabela-price.jsp">
-            Tabela Price</button></a>
+         <a class="btn btn-primary" href="tabela-price.jsp">Tabela Price</a>
           
         <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>

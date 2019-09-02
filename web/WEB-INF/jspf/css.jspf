@@ -1,0 +1,24 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<style>
+    input[type=text]{   
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border:1px solid;
+        width:200px
+    }
+
+    input[type=submit]{
+        text-align: left;
+    }
+    
+    body{
+        text-align: center;
+    }
+        
+    table{
+        margin: 0 auto;
+    }
+</style>

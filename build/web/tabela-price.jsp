@@ -11,17 +11,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabela Price</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
-    </head>
-    <style>
-        body{
-            text-align: center;   
-         }
-        table{
-            margin: 0 auto;
-        }
-             
-    </style>
+        <%@include file="WEB-INF/jspf/boots-trap.jspf" %>
+        
+        <%@include file="WEB-INF/jspf/css.jspf" %>
+    </head>    
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
         

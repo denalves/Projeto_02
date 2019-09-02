@@ -1,0 +1,20 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@include file="css.jspf" %>
+
+<div style="text-align: center" class="container">
+    
+    <h2>Preecha os campos para que possa ser feito o calculo: </h2>
+    
+    <form>
+        Valor Financiado: <input type="text" class="container" name="vf"></br></br>
+                
+        Número de Meses:  <input type="text" class="container" name="nm"></br></br>
+                
+        Taxa de Juros(%): <input type="text" class="container" name="tj"></br></br>
+                
+        <input type="submit" class="btn btn-success"  name="constante" value="Calcular"></br></br>
+    </form>
+            
+</div>
+
